@@ -5,24 +5,27 @@ tags: hexo+github，个人博客搭建
 ---
 
 - 坑先知： 
-	- [hexo官网](https://hexo.io/zh-cn/docs/)下面有应该对应什么node.js版本，通常没有什么问题
+	- [hexo官网](https://hexo.io/zh-cn/docs/)查看与node.js的版本对应
 	- github新建的仓库必须用[github用户名].github.io（例如：zhangsan.github.io）,并选择 README 初始化
 	- Git Push报错:remote: error: GH007: Your push would publish a private email address. 解决方案：github账户下取消勾选，setting->emails->Keep my email address private
 
 1、准备（可以直接看[hexo官网文档](https://hexo.io/zh-cn/docs/)，全面；也可参照下面这，简洁）
-[官网注册github](https://github.com/)并创建一个新仓库，注意上面提到的命名格式（建议用户名短一点，博客的访问会用上）
+
+1.1、[官网注册github](https://github.com/)并创建一个新仓库，注意上面提到的命名格式（建议用户名短一点，博客的访问会用上）
 [下载git](https://git-scm.com/)，并安装
 [下载node.js](https://nodejs.org/en/download/)，并安装
 
-1.1、验证
+1.2、验证
 创建一个准备放博客的路径（例如：D:\hexo\blog）,进入并右键，选择Git Bash Here，
 验证上面两个是否安装成功。
+
 ```bash
 $ git --version
 $ node -v
 $ npm -v
 ```
-1.2、配置github信息(用注册的用户名，邮箱)
+1.3、配置github信息(用注册的用户名，邮箱)
+
 ```bash
 $ git config --global user.name 'user name'
 $ git config --global user.email 'email.com'
