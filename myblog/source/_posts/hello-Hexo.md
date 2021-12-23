@@ -1,23 +1,26 @@
 ---
-title: 'hello,Hexo'
+title: 'hello,Hexo（一）'
 date: 2021-12-22 20:19:55
 tags: hexo+github，个人博客搭建
 ---
 
+【本篇文章解决的事情：
+		- 搭建hexo博客，并部署到github；
+		- 博客源文/源码提交github管理】
+
 - 坑先知： 
 	- [hexo官网](https://hexo.io/zh-cn/docs/)查看与node.js的版本对应
-	- github新建的仓库必须用[github用户名].github.io（例如：zhangsan.github.io）,并选择 README 初始化
+	- 重要：github新建的仓库必须用[github用户名].github.io（例如：zhangsan.github.io）,并选择 README 初始化
 	- Git Push报错:remote: error: GH007: Your push would publish a private email address. 解决方案：github账户下取消勾选，setting->emails->Keep my email address private
 
 1、准备（可以直接看[hexo官网文档](https://hexo.io/zh-cn/docs/)，全面；也可参照下面这，简洁）
-
-1.1、[官网注册github](https://github.com/)并创建一个新仓库，注意上面提到的命名格式（建议用户名短一点，博客的访问会用上）
-[下载git](https://git-scm.com/)，并安装
-[下载node.js](https://nodejs.org/en/download/)，并安装
+1.1、注册安装
+- [官网注册github](https://github.com/)并创建一个新仓库myblog，注意上面提到的命名格式（建议用户名短一点，博客的访问会用上），创建一个新分支blog
+- [下载git](https://git-scm.com/)，并安装
+- [下载node.js](https://nodejs.org/en/download/)，并安装
 
 1.2、验证
-创建一个准备放博客的路径（例如：D:\hexo\blog）,进入并右键，选择Git Bash Here，
-验证上面两个是否安装成功。
+	右键选择Git Bash Here，验证上面两个是否安装成功。
 
 ```bash
 $ git --version
@@ -34,8 +37,12 @@ $ git config --list
 ```
 
 2、根据[hexo官网文档](https://hexo.io/zh-cn/docs/)建站
-
+	找到一个路径，右键选择Git Bash Here
 ```bash
+# clone仓库
+$ git clone 仓库地址
+$ mkdir myblog
+$ cd myblog
 # 安装hexo
 $ npm install -g hexo-cli
 # 验证
@@ -55,8 +62,9 @@ $ hexo g
 # 本地部署
 $ hexo s
 ```
-浏览器打开http://localhost:4000 ，没出来大概率端口占用了
+浏览器打开http://localhost:4000 ，如果没出来，大概率端口占用了
 Tips:修改端口号
+
 ```bash
 $ hexo server -p 端口号
 ```
@@ -89,11 +97,11 @@ deploy:
   type: git
   # 创建的github的新仓库的ssh地址
   repository: git@github.com:用户名/用户名.github.io.git
-  # 对应的分支
-  branch: main
+  # 对应的新建的仓库的非default分支
+  branch: blog
 ```
 
-4、开始写一个
+4、部署
 ```bash
 # 在博客路径下安装一个扩展
 $ npm install hexo-deployer-git --save
@@ -111,6 +119,30 @@ $ npm install hexo-deployer-git --save
 ```
 5、访问
 http://用户名.github.io
+https://cz803.github.io/
+
+6、更新博客
+6.1、博客更新
+```bash
+$ hexo clean
+$ hexo g
+$ hexo d -g
+```
+6.2、博客源码更新
+```bash
+$ git pull
+$ git add .
+$ git status
+$ git commit -m "description"
+# main是对应的新建的仓库的default分支
+$ git push origin main
+```
+
+后续计划：
+	增加coding，gitee等国内源的部署与源码托管，使访问速度更快
+	修改设置博客主题风格，更加个性化，美观
+	增加评论功能，站点统计等功能
+	添加到谷歌，百度，等引擎的搜索
 
 拓展：
 可自定义主题美化，参考hexo官网
