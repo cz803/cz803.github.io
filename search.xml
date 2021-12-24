@@ -4,6 +4,7 @@
     <title>hello,Hexo（一）</title>
     <url>/2021/12/22/hello-Hexo/</url>
     <content><![CDATA[<p>【本篇文章解决的事情：<br>        - 搭建hexo博客，并部署到github；<br>        - 博客源文/源码提交github管理】</p>
+<span id="more"></span>
 <ul>
 <li>坑先知： <ul>
 <li><a href="https://hexo.io/zh-cn/docs/">hexo官网</a>查看与node.js的版本对应</li>
