@@ -30,7 +30,7 @@
 <meta property="og:description" content="【本篇文章解决的事情：        - 搭建hexo博客，并部署到github；        - 博客源文&#x2F;源码提交github管理】">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-22T12:19:55.000Z">
-<meta property="article:modified_time" content="2021-12-24T00:22:39.054Z">
+<meta property="article:modified_time" content="2021-12-24T03:45:55.759Z">
 <meta property="article:author" content="Mr.C">
 <meta property="article:tag" content="hexo+github，个人博客搭建">
 <meta name="twitter:card" content="summary">
@@ -238,7 +238,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-12-24 08:22:39" itemprop="dateModified" datetime="2021-12-24T08:22:39+08:00">2021-12-24</time>
+      <time title="修改时间：2021-12-24 11:45:55" itemprop="dateModified" datetime="2021-12-24T11:45:55+08:00">2021-12-24</time>
     </span>
 
   
@@ -283,11 +283,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p 端口号</span><br></pre></td></tr></table></figure>
 
 <p>3、Hexo和Github Pages绑定（为了别人也可以访问）<br>3.1、本地生成密钥</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用github注册那个邮箱，三个回车，生成密钥id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator\.ssh）</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;email.com&quot;</span></span><br><span class="line"><span class="comment"># 切换目录</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ ls</span><br><span class="line"><span class="comment"># 添加密钥到ssh-agent</span></span><br><span class="line">$ <span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line"><span class="comment"># 添加生成的SSH key到ssh-agent</span></span><br><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用github注册那个邮箱，三个回车，生成密钥id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator\.ssh）</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;email.com&quot;</span></span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱@xxx.com&quot;</span> -f <span class="string">&quot;github_id_rsa&quot;</span></span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">&quot;你的邮箱@xxx.com&quot;</span> -f <span class="string">&quot;coding_id_rsa&quot;</span></span><br><span class="line"><span class="comment"># 切换目录</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br><span class="line">$ ls</span><br><span class="line"><span class="comment"># 添加密钥到ssh-agent</span></span><br><span class="line">$ <span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line"><span class="comment"># 添加生成的SSH key到ssh-agent</span></span><br><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br><span class="line">$ ssh-add ~/.ssh/coding_id_rsa</span><br><span class="line">$ ssh-add ~/.ssh/github_id_rsa</span><br></pre></td></tr></table></figure>
 <p>3.2、登录github网站，头像下settiongs–&gt;SSH and GPG keys–&gt;SSH keys–&gt;New SSH key</p>
 <p>将id_rsa.pub文件里的内容复制上去</p>
 <p>3.3、测试ssh添加结果</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">$ ssh -T git@e.coding.net</span><br></pre></td></tr></table></figure>
 
 <p>3.4、hexo中的配置文件_config.yml</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  <span class="comment"># 创建的github的新仓库的ssh地址</span></span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  <span class="comment"># 对应的新建的仓库的非default分支</span></span><br><span class="line">  branch: blog</span><br></pre></td></tr></table></figure>
