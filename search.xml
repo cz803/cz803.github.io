@@ -78,7 +78,7 @@
 <p>后续计划：<br>    增加coding，gitee等国内源的部署与源码托管，使访问速度更快<br>    修改设置博客主题风格，更加个性化，美观<br>    增加评论功能，站点统计等功能<br>    添加到谷歌，百度，等引擎的搜索</p>
 <p>拓展：<br>可自定义主题美化，参考hexo官网<br><a href="https://theme-next.iissnan.com/third-party-services.html">nexT官网配置</a></p>
 <p>参考文献：<br><a href="https://www.cnblogs.com/quellanan/p/11613109.html">个性化配置，搜索引擎来提高访问</a><br><a href="https://blog.csdn.net/u012294515/article/details/83045860">用码云来替代github，访问更快更稳定</a><br><a href="https://blog.csdn.net/qq_35938621/article/details/107592297">用码云管理</a><br><a href="https://blog.csdn.net/qq_35117024/category_7904399.html">增加个性化功能，评论功能等</a></p>
-<p><a href="https://blog.csdn.net/weixin_43423781/article/details/120446848">解决使用github+Coding+码云部署hexo网站仓库分支不一样的问题(master or main）</a></p>
+<p><a href="https://blog.csdn.net/weixin_43423781/article/details/120446848">解决使用github+Coding+码云部署hexo网站仓库分支不一样的问题(master or main）</a><br><a href="https://blog.csdn.net/qq_23118345/article/details/121938638">coding认证不通过的问题解决</a></p>
 ]]></content>
       <tags>
         <tag>hexo+github，个人博客搭建</tag>
