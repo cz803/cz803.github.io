@@ -4,11 +4,11 @@
 
 # Site
 #博客名称
-title: 盗梦空间
+title: 太阳照常升起
 #副标题 
 subtitle: 一個普通人
 #个人简介
-description: 如果说我看得比别人更远些，那是因为我站在巨人的肩膀上。我的知识来自网络，也真心希望每一位来访的朋友都能有所收获。
+description: 我的知识来自网络，也真心希望每一位来访的朋友都能有所收获。
 keywords:
 #博主
 author: Mr.C
@@ -19,7 +19,9 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://cz803.github.io
+# url: https://cz803.github.io
+url: http://cz803.gitee.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -110,6 +112,45 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: 
-    github: git@github.com:cz803/cz803.github.io.git
-  branch: main
+  repo: 
+    github: git@github.com:cz803/cz803.github.io.git,main
+    coding: git@e.coding.net:cz803/blog/hexoBlog.git,master
+    gitee: git@gitee.com:cz803/cz803.git,master
+# 本地搜索
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+# 添加下方人物模型
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-hijiki
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true
+# RSS订阅
+# Plugins: 
+# - hexo-generate-feed
+# feed:
+  # All available type:
+  # atom | rss2
+  type: rss2
+  # All available path:
+  # atom.xml | rss2.xml
+  path: rss2.xml
+  # limit: 20
+  # hub:
+  content: true
+  # content_limit: 140
+  # content_limit_delim: ' '

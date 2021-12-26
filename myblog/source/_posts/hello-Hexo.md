@@ -1,25 +1,31 @@
 ---
 title: 'hello,Hexo（一）'
 date: 2021-12-22 20:19:55
-tags: hexo+github，个人博客搭建
+tags: 
+- hexo+github
+- 个人博客搭建
+categories: 学习
 ---
 
 【本篇文章解决的事情：
 		- 搭建hexo博客，并部署到github；
 		- 博客源文/源码提交github管理】
+<!-- more -->
 
 - 坑先知： 
 	- [hexo官网](https://hexo.io/zh-cn/docs/)查看与node.js的版本对应
 	- 重要：github新建的仓库必须用[github用户名].github.io（例如：zhangsan.github.io）,并选择 README 初始化
 	- Git Push报错:remote: error: GH007: Your push would publish a private email address. 解决方案：github账户下取消勾选，setting->emails->Keep my email address private
 
-1、准备（可以直接看[hexo官网文档](https://hexo.io/zh-cn/docs/)，全面；也可参照下面这，简洁）
-1.1、注册安装
+## 1、准备
+（可以直接看[hexo官网文档](https://hexo.io/zh-cn/docs/)，全面；也可参照下面这，简洁）
+### 1.1、注册安装
+
 - [官网注册github](https://github.com/)并创建一个新仓库myblog，注意上面提到的命名格式（建议用户名短一点，博客的访问会用上），创建一个新分支blog
 - [下载git](https://git-scm.com/)，并安装
 - [下载node.js](https://nodejs.org/en/download/)，并安装
 
-1.2、验证
+### 1.2、验证
 	右键选择Git Bash Here，验证上面两个是否安装成功。
 
 ```bash
@@ -27,7 +33,7 @@ $ git --version
 $ node -v
 $ npm -v
 ```
-1.3、配置github信息(用注册的用户名，邮箱)
+### 1.3、配置github信息(用注册的用户名，邮箱)
 
 ```bash
 $ git config --global user.name 'user name'
@@ -36,7 +42,7 @@ $ git config --global user.email 'email.com'
 $ git config --list
 ```
 
-2、根据[hexo官网文档](https://hexo.io/zh-cn/docs/)建站
+## 2、根据[hexo官网文档](https://hexo.io/zh-cn/docs/)建站
 	找到一个路径，右键选择Git Bash Here
 ```bash
 # clone仓库
@@ -48,14 +54,14 @@ $ npm install -g hexo-cli
 # 验证
 $ hexo -v
 ```
-2.1、建站
+### 2.1、建站
 ```bash
 # 在建站的路径下右键打开git命令行
 # 初始化
 $ hexo init
 $ npm install
 ```
-2.2、本地部署测试
+### 2.2、本地部署测试
 ```bash
 # 编译
 $ hexo g
@@ -69,11 +75,15 @@ Tips:修改端口号
 $ hexo server -p 端口号
 ```
 
-3、Hexo和Github Pages绑定（为了别人也可以访问）
-3.1、本地生成密钥
+## 3、Hexo和Github Pages绑定
+（为了别人也可以访问）
+### 3.1、本地生成密钥
 ```bash
 # 用github注册那个邮箱，三个回车，生成密钥id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator\.ssh）
 $ ssh-keygen -t rsa -C "email.com"
+# 或
+$ ssh-keygen -t rsa -C "你的邮箱@xxx.com" -f "github_id_rsa"
+$ ssh-keygen -t rsa -C "你的邮箱@xxx.com" -f "coding_id_rsa"
 # 切换目录
 $ cd ~/.ssh
 $ ls
@@ -81,17 +91,21 @@ $ ls
 $ eval "$(ssh-agent -s)"
 # 添加生成的SSH key到ssh-agent
 $ ssh-add ~/.ssh/id_rsa
+$ ssh-add ~/.ssh/coding_id_rsa
+$ ssh-add ~/.ssh/github_id_rsa
 ```
-3.2、登录github网站，头像下settiongs-->SSH and GPG keys-->SSH keys-->New SSH key
+### 3.2、登录github网站，头像下settiongs-->SSH and GPG keys-->SSH keys-->New SSH key
 
 将id_rsa.pub文件里的内容复制上去
 
-3.3、测试ssh添加结果
+### 3.3、测试ssh添加结果
 ```bash
 $ ssh -T git@github.com
+$ ssh -T git@e.coding.net
+$ ssh -T git@gitee.com
 ```
 
-3.4、hexo中的配置文件_config.yml
+### 3.4、hexo中的配置文件_config.yml
 ```bash
 deploy:
   type: git
@@ -101,7 +115,7 @@ deploy:
   branch: blog
 ```
 
-4、部署
+## 4、部署
 ```bash
 # 在博客路径下安装一个扩展
 $ npm install hexo-deployer-git --save
@@ -117,18 +131,19 @@ $ npm install hexo-deployer-git --save
 # 生成部署
 >hexo d -g
 ```
-5、访问
+## 5、访问
 http://用户名.github.io
 https://cz803.github.io/
 
-6、更新博客
-6.1、博客更新
+
+## 6、更新博客
+### 6.1、博客更新
 ```bash
 $ hexo clean
 $ hexo g
 $ hexo d -g
 ```
-6.2、博客源码更新
+### 6.2、博客源码更新
 ```bash
 $ git pull
 $ git add .
@@ -138,17 +153,21 @@ $ git commit -m "description"
 $ git push origin main
 ```
 
-后续计划：
+## 后续计划：
 	增加coding，gitee等国内源的部署与源码托管，使访问速度更快
 	修改设置博客主题风格，更加个性化，美观
 	增加评论功能，站点统计等功能
 	添加到谷歌，百度，等引擎的搜索
 
-拓展：
+## 拓展：
 可自定义主题美化，参考hexo官网
+[nexT官网配置](https://theme-next.iissnan.com/third-party-services.html)
 
-参考文献：
+## 参考文献：
 [个性化配置，搜索引擎来提高访问](https://www.cnblogs.com/quellanan/p/11613109.html)
 [用码云来替代github，访问更快更稳定](https://blog.csdn.net/u012294515/article/details/83045860)
 [用码云管理](https://blog.csdn.net/qq_35938621/article/details/107592297)
 [增加个性化功能，评论功能等](https://blog.csdn.net/qq_35117024/category_7904399.html)
+
+[解决使用github+Coding+码云部署hexo网站仓库分支不一样的问题(master or main）](https://blog.csdn.net/weixin_43423781/article/details/120446848)
+[coding认证不通过的问题解决](https://blog.csdn.net/qq_23118345/article/details/121938638)
