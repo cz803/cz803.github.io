@@ -3,12 +3,14 @@
   <entry>
     <title>LaTeX的入门使用</title>
     <url>/2021/12/26/LaTeX%E5%86%99%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/</url>
-    <content><![CDATA[<p>1、选择搭建LaTeX环境/选用在线编辑<br><a href="https://blog.csdn.net/Mikchy/article/details/94448707">搭建环境</a><br><a href="https://blog.csdn.net/qq_28966711/article/details/104246494">搭建LaTeX写作环境</a><br><a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/">清华TeXlive镜像</a></p>
+    <content><![CDATA[<p>1、选择搭建LaTeX环境/选用在线编辑<br>    <a href="https://blog.csdn.net/Mikchy/article/details/94448707">搭建环境</a><br>    <a href="https://blog.csdn.net/qq_28966711/article/details/104246494">搭建LaTeX写作环境</a><br>    <a href="https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/">清华TeXlive镜像</a></p>
+<span id="more"></span>
 <p><a href="https://www.overleaf.com/">在线LaTeX编辑器overleaf</a></p>
 <p>2、入门使用资料<br><a href="https://x-magus.github.io/ThesisUESTC/">LaTeX毕业论文模板与写作</a></p>
 <p><a href="https://www.luogu.com.cn/blog/IowaBattleship/latex-gong-shi-tai-quan">LaTeX公式大全</a></p>
 <p><a href="https://blog.csdn.net/dogfat/article/details/106962966">TexStudio安装与简单使用</a></p>
 <p><a href="https://blog.csdn.net/weixin_39278265/article/details/97832921">参考文献管理工具</a></p>
+<p>3、查找文件<br><a href="https://gfsoso.99lb.net/sci-hub.html">谷粉</a><br><a href="https://arxiv.org/archive/cs">康奈尔大学</a><br><a href="https://dblp.uni-trier.de/">dblp</a><br><a href="https://xs.dailyheadlines.cc/">深度学术</a></p>
 ]]></content>
       <categories>
         <category>论文写作</category>
@@ -86,6 +88,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/12/22/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>hello,Hexo（二）</title>
     <url>/2021/12/26/hello-Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
     <content><![CDATA[<p>这是一篇草稿纸</p>
@@ -110,6 +132,7 @@
 <p>ssh-agent，重启失效问题</p>
 <p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-msysgit">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases#auto-launching-ssh-agent-on-msysgit</a></p>
 <p><a href="https://developer.aliyun.com/article/6923">https://developer.aliyun.com/article/6923</a></p>
+<p>添加置顶功能：<a href="https://blog.csdn.net/nineya_com/article/details/103394315">https://blog.csdn.net/nineya_com/article/details/103394315</a></p>
 ]]></content>
       <categories>
         <category>Diary</category>
@@ -121,25 +144,5 @@
         <tag>hexo+github</tag>
         <tag>个人博客搭建</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/12/22/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
