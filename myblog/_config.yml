@@ -47,7 +47,9 @@ external_link:
   field: site # Apply to the whole site
   exclude: ''
 filename_case: 0
+# 草稿文章是否展示
 render_drafts: false
+# 图床文件夹，是否随文创建
 post_asset_folder: false
 relative_link: false
 future: true
@@ -139,18 +141,3 @@ live2d:
     height: 300
   mobile:
     show: true
-# RSS订阅
-# Plugins: 
-# - hexo-generate-feed
-# feed:
-  # All available type:
-  # atom | rss2
-  type: rss2
-  # All available path:
-  # atom.xml | rss2.xml
-  path: rss2.xml
-  # limit: 20
-  # hub:
-  content: true
-  # content_limit: 140
-  # content_limit_delim: ' '

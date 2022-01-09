@@ -4,7 +4,8 @@ date: 2021-12-22 20:19:55
 tags: 
 - hexo+github
 - 个人博客搭建
-categories: 学习
+
+top: 1
 ---
 
 【本篇文章解决的事情：
