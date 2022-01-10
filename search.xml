@@ -130,8 +130,8 @@
 添加到谷歌，百度，等引擎的搜索
 </code></pre>
 <h2 id="拓展："><a href="#拓展：" class="headerlink" title="拓展："></a>拓展：</h2><p>可自定义主题美化，参考hexo官网<br><a href="https://theme-next.iissnan.com/third-party-services.html">nexT官网配置</a></p>
-<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><p><a href="https://www.cnblogs.com/quellanan/p/11613109.html">个性化配置，搜索引擎来提高访问</a><br><a href="https://blog.csdn.net/u012294515/article/details/83045860">用码云来替代github，访问更快更稳定</a><br><a href="https://blog.csdn.net/qq_35938621/article/details/107592297">用码云管理</a><br><a href="https://blog.csdn.net/qq_35117024/category_7904399.html">增加个性化功能，评论功能等</a></p>
-<p><a href="https://blog.csdn.net/weixin_43423781/article/details/120446848">解决使用github+Coding+码云部署hexo网站仓库分支不一样的问题(master or main）</a><br><a href="https://blog.csdn.net/qq_23118345/article/details/121938638">coding认证不通过的问题解决</a></p>
+<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><p>个性化配置，搜索引擎来提高访问：<a href="https://www.cnblogs.com/quellanan/p/11613109.html">https://www.cnblogs.com/quellanan/p/11613109.html</a><br>用码云来替代github，访问更快更稳定：<a href="https://blog.csdn.net/u012294515/article/details/83045860">https://blog.csdn.net/u012294515/article/details/83045860</a><br>用码云管理：<a href="https://blog.csdn.net/qq_35938621/article/details/107592297">https://blog.csdn.net/qq_35938621/article/details/107592297</a><br>增加个性化功能，评论功能等：<a href="https://blog.csdn.net/qq_35117024/category_7904399.html">https://blog.csdn.net/qq_35117024/category_7904399.html</a></p>
+<p>解决使用github+Coding+码云部署hexo网站仓库分支不一样的问题(master or main）：<a href="https://blog.csdn.net/weixin_43423781/article/details/120446848">https://blog.csdn.net/weixin_43423781/article/details/120446848</a><br>coding认证不通过的问题解决：<a href="https://blog.csdn.net/qq_23118345/article/details/121938638">https://blog.csdn.net/qq_23118345/article/details/121938638</a></p>
 ]]></content>
       <tags>
         <tag>hexo+github</tag>
